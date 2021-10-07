@@ -25,6 +25,16 @@ public class prueba {
             Logger.getLogger(prueba.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("ERROR EN METODO LISTAR PRODUCTOS");
         }
+        /*
+        String nombretest = "PRUEBA nombre PRODUCTO";
+        String descripciontest = "PRUEBA descripcion PRODUCTO";
+        int stocktest = 1000;
+        int valortest = 123456;
+        String pesotest = "PRUEBA peso PRODUCTO";
+        
+        Producto ptest =  new Producto();
+        p.guardarProducto(nombretest, descripciontest, stocktest, valortest, pesotest);
+        */
         
         Statement st;
         ResultSet rs;

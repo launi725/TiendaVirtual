@@ -77,10 +77,10 @@ public class Producto {
         this.peso = peso;
     }
     
-    public boolean guardarProducto(){
+    public boolean guardarProducto(String nombre, String descripcion, int stock, int valor, String peso){
         ConexionDB conexion = new ConexionDB();
         
-        String sentencia = "INSERT INTO producto (nombre, descripcion, stock, precio, peso) "
+        String sentencia = "INSERT INTO producto (nombre, descripcion, stock, valor, peso) "
                 + " VALUES ('" + this.nombre + "','" + this.descripcion + "','" + this.stock + "','"
                 + this.valor + "','" + this.peso + "'); ";
         if (conexion.setAutoCommitDB(false)) {
@@ -119,7 +119,7 @@ public class Producto {
         }
     }
     
-    public boolean actualizarProducto(){
+    public boolean actualizarProducto(int idProducto){
         ConexionDB conexion = new ConexionDB();
         String sentencia = "UPDATE producto SET nombre='" +this.nombre+ "',descripcion='" +this.descripcion+ 
                 "',stock='" +this.stock+ "',valor='" + this.valor + "',peso='" + this.peso +
